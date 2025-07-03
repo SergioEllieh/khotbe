@@ -1,0 +1,128 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  background: #f8f6f2;
+  color: #3a2c1a;
+}
+
+.wedding-app {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fffdfa;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(60,40,20,0.08);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+  margin-bottom: 0.2em;
+  color: #a67c52;
+}
+
+header h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+  color: #3a2c1a;
+}
+
+.subtitle {
+  color: #7d6b4a;
+  font-size: 1.1rem;
+  margin-bottom: 0.5em;
+}
+
+.camera-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.camera-btn {
+  background: linear-gradient(90deg, #a67c52 0%, #e6c9a8 100%);
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.7em 2.2em;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(166,124,82,0.08);
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  transition: background 0.2s, transform 0.2s;
+  margin-bottom: 1em;
+}
+.camera-btn:active {
+  transform: scale(0.97);
+}
+.camera-btn:disabled {
+  background: #d3c1a1;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #b94a48;
+  background: #fbeeea;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  margin-top: 0.5em;
+}
+
+.gallery-section {
+  margin-top: 2rem;
+}
+.gallery-section h3 {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #a67c52;
+  margin-bottom: 1em;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.2em;
+}
+.gallery-item {
+  background: #f8f6f2;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(60,40,20,0.06);
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gallery-item img {
+  width: 100%;
+  max-width: 140px;
+  border-radius: 8px;
+  margin-bottom: 0.5em;
+  box-shadow: 0 1px 4px rgba(60,40,20,0.08);
+}
+.download-link {
+  color: #a67c52;
+  text-decoration: none;
+  font-size: 0.95em;
+  margin-top: 0.2em;
+  transition: color 0.2s;
+}
+.download-link:hover {
+  color: #3a2c1a;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2.5rem;
+  color: #b6a07a;
+  font-size: 1em;
+  letter-spacing: 1px;
+}
