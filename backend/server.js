@@ -9,6 +9,11 @@ const app = express();
 app.use(cors());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+const uploadDir = path.join(__dirname, 'uploads');
+if (!fs.existsSync(uploadDir)) {
+  fs.mkdirSync(uploadDir);
+}
+
 // Multer setup
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
