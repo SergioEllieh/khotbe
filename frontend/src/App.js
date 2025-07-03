@@ -48,7 +48,7 @@ function App() {
     <div className="wedding-app">
       <header>
         <h1>Nemer & Thouraya</h1>
-        <h2>Wedding Gallery</h2>
+        <h2>Engagement Gallery</h2>
         <p className="subtitle">Share your moments! Take a photo and it will appear here for everyone to see.</p>
       </header>
       <div className="camera-section">
