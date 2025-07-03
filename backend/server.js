@@ -5,7 +5,6 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const PORT = 5000;
 
 app.use(cors());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
@@ -40,6 +39,15 @@ app.get('/photos', (req, res) => {
   });
 });
 
+// Serve frontend static files
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+
+// Serve React frontend on all other GET requests
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+});
+
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 }); 
